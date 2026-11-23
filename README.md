@@ -52,8 +52,8 @@ compressed = model.compress(context, removal_ratio=0.40)
 Python 3.10 or newer is recommended.
 
 ```bash
-git clone https://github.com/mejrissimeh-bit/bsrt-semantic-compression.git
-cd bsrt-semantic-compression
+git clone https://github.com/mejrissimeh-bit/BSRT.git
+cd BSRT
 python -m venv .venv
 python -m pip install -e .
 python examples/compress.py
@@ -116,3 +116,4 @@ Master's thesis project in machine learning, semantic communication, reproducibl
 ## License
 
 Code is released under the MIT License. SQuAD and the pretrained QA model retain their own licenses and terms.
+
