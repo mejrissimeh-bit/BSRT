@@ -8,7 +8,7 @@ version = "1.0.0"
 description = "Budget-conditioned Transformer for question-independent semantic token compression"
 readme = "README.md"
 requires-python = ">=3.10"
-license = {text = "MIT"}
+license = "MIT"
 authors = [{name = "Mehdi Mejrissi"}]
 dependencies = [
   "numpy>=1.24",
@@ -30,7 +30,8 @@ research = [
 ]
 
 [tool.setuptools.packages.find]
-include = ["bsrt_neural_compression*"]
+include = ["bsrt_neural_compression*", "experiments*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
