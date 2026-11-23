@@ -1,0 +1,14 @@
+{
+  "best_validation_f1": 0.7423295012449423,
+  "best_stage": "pretrain",
+  "best_epoch": 7,
+  "elapsed_seconds_this_invocation": 228.1930829999037,
+  "new_qa_calls_this_invocation": 673,
+  "qa_seconds": 110.7806648996193,
+  "peak_rss_mb": 911.896576,
+  "gpu_peak_bytes": 0,
+  "train_contexts": 256,
+  "validation_contexts": 12,
+  "train_questions_available": 1980,
+  "train_questions_for_reward": 1394
+}

@@ -1,0 +1,19 @@
+{
+  "name": "BSRT-A0",
+  "qa_model": "deepset/bert-base-cased-squad2",
+  "cache_dir": ".cache/bsrt",
+  "weights": "bsrt_a0.safetensors",
+  "seed": 20261103,
+  "model": {
+    "input_dim": 768,
+    "hidden_dim": 96,
+    "layers": 2,
+    "heads": 4,
+    "dropout": 0.1,
+    "contextual": true,
+    "budget_conditioning": true,
+    "structural_features": true,
+    "contextual_vectors": true,
+    "position_embedding": true
+  }
+}
