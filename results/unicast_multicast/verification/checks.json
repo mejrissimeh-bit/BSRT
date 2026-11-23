@@ -1,0 +1,141 @@
+{
+  "complete": true,
+  "passed": true,
+  "checks": [
+    {
+      "check": "Locked implementation files unchanged",
+      "passed": true,
+      "details": {
+        "task_aligned_multicast_500/cohort.py": true,
+        "task_aligned_multicast_500/transport.py": true,
+        "task_aligned_multicast_500/run.py": true,
+        "paper_multi_receiver_task_alignment/run_task_alignment.py": true,
+        "multicast_coding_budget/compressed_transport.py": true,
+        "multicast_coding_budget/transport.py": true,
+        "semantic_multicast/core.py": true,
+        "bsrt_budgeted_ldpc/channel.py": true,
+        "bsrt_communication_evaluation/channel.py": true,
+        "bsrt_communication_evaluation/token_ids.py": true,
+        "bsrt_neural_compression/reward.py": true,
+        "main.py": true
+      }
+    },
+    {
+      "check": "Locked software versions match",
+      "passed": true,
+      "details": {
+        "torch": "2.13.0",
+        "sionna": "2.0.1",
+        "numpy": "2.4.4",
+        "transformers": "4.57.6",
+        "scikit-learn": "1.8.0"
+      }
+    },
+    {
+      "check": "Eligibility matches original non-singleton cluster memberships",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Complete and unique paired subgroup outcomes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Identical receiver IDs, physical seeds, SNRs and source lengths across strategies",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "All receiver SNR offsets and seeds independently reconstructed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Exact equal subgroup wire budget",
+      "passed": true,
+      "details": {
+        "per_strategy_bits": 524268
+      }
+    },
+    {
+      "check": "Frame dimensions cover every retained source bit within budget",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "BER and message-success labels match error counts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "All 36,000 exported records agree with authoritative SQLite cases",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Independent token-F1 recalculation for all 29,952 subgroup outcomes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Independent binary-label recalculation for all subgroup outcomes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Every plotted mean reproduced from original question-level records",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Plot data exactly match recomputed means",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "All error-free messages reproduce clean text, predictions and all QA metrics",
+      "passed": true,
+      "details": {
+        "outcomes": 18119
+      }
+    },
+    {
+      "check": "Fresh transport replay matches saved waveforms, received text and every recorded transport statistic",
+      "passed": true,
+      "details": {
+        "transmissions": 52
+      }
+    },
+    {
+      "check": "AWGN power, QPSK BER and soft-demapper sign sanity checks",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Fresh local BERT inference reproduces selected saved predictions",
+      "passed": true,
+      "details": {
+        "predictions": 8
+      }
+    },
+    {
+      "check": "Fresh Sentence-BERT scores and threshold decisions reproduce selected records",
+      "passed": true,
+      "details": {
+        "answer_pairs": 31,
+        "max_absolute_error": 2.384185791015625e-07
+      }
+    },
+    {
+      "check": "Original run lock, raw CSV and SQLite source files unchanged by audit",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "source_sha256": {
+    "run_lock.json": "49558b3fe6518982982219455707c634b33c8edf84901099da8e6d17f9a8d2f5",
+    "receiver_results.csv": "f49f11dc63c4bb5a6bba43198a3acf3bf6e4bc18a36b3cca425e63ab2f4f0bbd",
+    "results.sqlite3": "e307c5fb178dbc21c7d040c6cbd7aecac291574b57351959fa673bdef28e85dc"
+  }
+}

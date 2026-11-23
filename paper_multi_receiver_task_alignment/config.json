@@ -1,0 +1,15 @@
+{
+  "input_csv": "fresh_500_policy_comparison/results_attention_balanced_token_policy/all_strategy_sample_results.csv",
+  "output_dir": "paper_multi_receiver_task_alignment/results/task_gradient_l2_fresh500",
+  "qa_model": "deepset/bert-base-cased-squad2",
+  "similarity_model": "all-MiniLM-L6-v2",
+  "removal_percentages": [5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
+  "minimum_receivers_per_context": 2,
+  "max_context_tokens": 256,
+  "qa_batch_size": 16,
+  "minimum_task_alignment": 0.75,
+  "maximum_clusters": 6,
+  "representation_penalty": 0.08,
+  "importance_estimator": "distortion_gradient_l2",
+  "random_seed": 42
+}

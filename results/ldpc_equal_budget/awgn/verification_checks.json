@@ -1,0 +1,72 @@
+{
+  "checks": {
+    "Experiment code unchanged since run": true,
+    "originals source fingerprint unchanged": true,
+    "bsrt source fingerprint unchanged": true,
+    "All 9600 planned outcomes, no duplicate keys": true,
+    "200 questions and 36 contexts": true,
+    "All metrics finite": true,
+    "Correctness values are binary": true,
+    "Per-row total bits equal original budget": true,
+    "Per-row QPSK symbols exactly half transmitted bits": true,
+    "Parity accounting and rate": true,
+    "Every coded outcome has a matching original question/seed/SNR": true,
+    "Paired original agrees on context_id": true,
+    "Paired original agrees on dataset_index": true,
+    "Paired original agrees on physical_seed": true,
+    "Paired original agrees on transmitted_bits": true,
+    "Paired original agrees on qpsk_symbols": true,
+    "Context seed rule matches": true,
+    "One received broadcast per context/level/SNR/seed": true,
+    "Compression is independent of question/SNR/seed": true,
+    "All saved F1 values independently reproduced": true,
+    "All saved exact-match values reproduced": true,
+    "All binary accuracy labels match the implemented criterion": true,
+    "Summary agrees with all raw rows": true,
+    "Selected coded transmissions reproduce stored BER": true,
+    "Selected coded received IDs/text reproduce exactly": true,
+    "Selected cached original transmissions reproduce exactly": true,
+    "Zero BER reproduces compressed source IDs": true,
+    "Fresh selected QA predictions match saved predictions": true,
+    "Selected semantic similarities independently reproduced": true,
+    "Selected complete QA metrics independently reproduced": true
+  },
+  "replayed_coded_transmissions": 16,
+  "replayed_original_transmissions": 16,
+  "fresh_qa_rechecks": [
+    {
+      "question_id": "56bebb293aeaaa14008c9304",
+      "removal_percent": 30,
+      "snr_db": 5,
+      "prediction": "Stanford",
+      "accuracy": 1
+    },
+    {
+      "question_id": "56bebb293aeaaa14008c9304",
+      "removal_percent": 40,
+      "snr_db": 3,
+      "prediction": "marble University theutical Clara Marriott",
+      "accuracy": 0
+    },
+    {
+      "question_id": "56beb4e43aeaaa14008c9266",
+      "removal_percent": 30,
+      "snr_db": 5,
+      "prediction": "Brock Osweiler",
+      "accuracy": 1
+    },
+    {
+      "question_id": "56beb4e43aeaaa14008c9266",
+      "removal_percent": 40,
+      "snr_db": 3,
+      "prediction": "Brock Osweiler",
+      "accuracy": 1
+    }
+  ],
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20261104,
+    "unit": "context",
+    "seeds_treated_as": "fixed evaluated repeats"
+  }
+}

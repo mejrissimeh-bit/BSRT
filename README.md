@@ -15,6 +15,40 @@ At 40% removal, the context-cluster bootstrap estimate for BSRT minus L2 is **+0
 
 ![Adaptive quality comparison](results/final_adaptive_quality.png)
 
+## Equal-budget LDPC results
+
+The communication study reinvests bits saved by semantic compression into rate-matched LDPC. Every coded frame uses exactly the same number of transmitted bits and QPSK symbols as the uncoded original-token baseline for that context.
+
+| AWGN SNR | Best tested LDPC setting | LDPC accuracy | Uncoded original | Gain |
+|---:|---:|---:|---:|---:|
+| 3 dB | 40% removal | **0.815** | 0.145 | **+0.670** |
+| 5 dB | 30% removal | **0.860** | 0.398 | **+0.462** |
+| 7 dB | 10% removal | **0.922** | 0.735 | **+0.187** |
+
+These are descriptive best points among the tested settings, not an adaptive selection policy. At 0 dB every coded setting underperformed the uncoded original, which is reported rather than hidden. The complete 9,600-outcome AWGN experiment, context-clustered intervals, BER audit, fading and packet-loss extensions, and the 90,000-outcome half-decibel sweep are in [`results/ldpc_equal_budget`](results/ldpc_equal_budget).
+
+![Equal-budget LDPC under AWGN and fading](results/ldpc_equal_budget/budgeted_ldpc_awgn_fading_accuracy.png)
+
+## Multi-receiver unicast versus multicast
+
+The end-to-end multi-receiver study compares individually task-compressed Unicast with task-aligned Multicast at the same aggregate wire budget. Multicast avoids duplicate source messages inside aligned receiver clusters and spends the saved capacity on LDPC and repetition.
+
+The final paired analysis contains 416 receivers from 30 contexts and 109 non-singleton clusters. Both strategies use 524,268 bits per channel, SNR, and seed condition.
+
+| Channel and group-center SNR | Unicast accuracy | Multicast accuracy | Gain |
+|---|---:|---:|---:|
+| AWGN, 3 dB | 0.232 | **0.877** | **+0.646** |
+| AWGN, 5 dB | 0.452 | **0.904** | **+0.452** |
+| TDL fading, 3 dB | 0.228 | **0.874** | **+0.646** |
+| TDL fading, 5 dB | 0.420 | **0.905** | **+0.485** |
+| AWGN, 15 dB | **0.916** | 0.904 | -0.012 |
+
+Multicast reaches zero observed residual information BER from 5 dB in AWGN and 7 dB in the tested TDL setting. At 15 dB, Unicast retains a small advantage because its clean representation is tailored to each receiver. The experiment is answer-supervised and task-aware, so it is presented as a reference communication study rather than the deployable question-independent BSRT policy.
+
+![Unicast versus task-aligned multicast](results/unicast_multicast/unicast_vs_multicast_non_singleton_receivers.png)
+
+Full metrics, paired context-bootstrap intervals, verification records, the complete 500-question analysis, and the exact method boundary are in [`results/unicast_multicast`](results/unicast_multicast).
+
 ## What I built
 
 - A budget-conditioned, two-layer Transformer retention head in PyTorch
@@ -24,7 +58,9 @@ At 40% removal, the context-cluster bootstrap estimate for BSRT minus L2 is **+0
 - A staged learning pipeline with answer-span pretraining, offline mask search, reward-weighted distillation, and validation-based model selection
 - Paired evaluation across ten compression levels with QA F1, exact-match accuracy, semantic similarity, timing, ablations, and context-cluster bootstrap intervals
 - Communication extensions covering QPSK, AWGN and TDL channels, packet erasures, and rate-matched LDPC under a fixed bit budget
-- Exploratory PCA semantic-basis compression and multi-receiver task-alignment experiments
+- A verified equal-budget LDPC study with BER checks, context-clustered uncertainty, fading, and packet-loss extensions
+- A task-aligned Unicast versus Multicast system with equal aggregate wire budgets, receiver clustering, LDPC, and repetition
+- Exploratory PCA semantic-basis compression and receiver-alignment studies
 
 ## Architecture
 
@@ -76,7 +112,12 @@ checkpoints/               Released BSRT-A0 head and portable configuration
 experiments/communication/ QPSK, channel, token-ID, and LDPC components
 experiments/pca_basis/     PCA semantic-basis experiments
 experiments/multi_receiver Receiver-specific gradient-alignment study
-results/                   Aggregated metrics, reports, and thesis figures
+task_aligned_multicast_500 End-to-end Unicast versus Multicast experiment
+multicast_coding_budget/   Equal-budget channel coding and frame allocation
+semantic_multicast/        Multicast allocation and selection components
+results/ldpc_equal_budget/ LDPC metrics, audits, reports, and figures
+results/unicast_multicast/ Paired Unicast and Multicast results and verification
+results/                   BSRT metrics, reports, and thesis figures
 tests/                     Fast tests that require no dataset or model download
 docs/                      Method and reproducibility notes
 ```
@@ -116,4 +157,3 @@ Master's thesis project in machine learning, semantic communication, reproducibl
 ## License
 
 Code is released under the MIT License. SQuAD and the pretrained QA model retain their own licenses and terms.
-

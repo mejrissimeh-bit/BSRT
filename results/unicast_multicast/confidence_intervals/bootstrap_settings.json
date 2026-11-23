@@ -1,0 +1,15 @@
+{
+  "source": "archived paired receiver-level results, not redistributed",
+  "source_sha256": "0093ce7d56b4db092794eba7a465b8a7d9510bdcc7975f975c40eb880ef309f6",
+  "replicates": 50000,
+  "bootstrap_seed": 20261106,
+  "confidence_level": 0.95,
+  "method": "paired context-clustered percentile bootstrap",
+  "estimand": "question-weighted multicast minus unicast accuracy, averaged over three fixed channel seeds",
+  "resampling": "Draw 30 contexts with replacement, retaining every question, both strategies and all three seeds in each selected context",
+  "denominator": "sum of eligible question counts in the resampled contexts, including repeated contexts",
+  "interval_scope": "pointwise; not simultaneous across SNR/channel comparisons",
+  "channel_seed_scope": "conditional on the three recorded channel seeds; no channel-seed resampling",
+  "correctness_rule": "original historical OR/equality/containment rule; neither AND-rescored nor manually corrected labels",
+  "p_values_computed": false
+}

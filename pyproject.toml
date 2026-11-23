@@ -30,8 +30,15 @@ research = [
 ]
 
 [tool.setuptools.packages.find]
-include = ["bsrt_neural_compression*", "experiments*"]
+include = [
+  "bsrt_neural_compression*",
+  "experiments*",
+  "bsrt_communication_evaluation*",
+  "multicast_coding_budget*",
+  "paper_multi_receiver_task_alignment*",
+  "semantic_multicast*",
+  "task_aligned_multicast_500*"
+]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-

@@ -1,0 +1,39 @@
+{
+  "source_csv": "results/ldpc_equal_budget/half_db/summary.csv",
+  "source_sha256": "46b29a6435c29f35441c17cca2b7a09e891fea3342b5b38519884d53fe475feb",
+  "questions": 200,
+  "contexts": 36,
+  "channel_seeds": [
+    42,
+    123,
+    2024
+  ],
+  "snr_db_values": [
+    0,
+    0.5,
+    1,
+    1.5,
+    2,
+    2.5,
+    3,
+    3.5,
+    4,
+    4.5,
+    5,
+    5.5,
+    6,
+    6.5,
+    7
+  ],
+  "snr_step_db": 0.5,
+  "removal_percentages": [
+    10,
+    20,
+    30,
+    40
+  ],
+  "outcomes": 90000,
+  "displayed_fading_title": "TDL multipath fading channel",
+  "physical_tdl_model": "A",
+  "simulation_unchanged": true
+}

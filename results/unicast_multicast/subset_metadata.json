@@ -1,0 +1,35 @@
+{
+  "analysis": "Paired descriptive subset of the existing final run; no rerun or retraining",
+  "selection": "Include receivers only when their original task-alignment cluster has at least two members",
+  "questions": 416,
+  "excluded_singleton_questions": 84,
+  "contexts": 30,
+  "clusters": 109,
+  "receiver_outcomes": 29952,
+  "outcomes_per_curve_point": 1248,
+  "seeds": [
+    42,
+    123,
+    2024
+  ],
+  "snr_db_values": [
+    0,
+    3,
+    5,
+    7,
+    10,
+    15
+  ],
+  "paired_snr_seeds_payload_length_verified": true,
+  "aggregate_budget_per_strategy_per_channel_snr_seed_bits": 524268,
+  "averaging": "Equal weight to each eligible question, then average the three seeds",
+  "snr_assignment": "Unchanged original full-context-group receiver offsets and physical seeds; not reassigned after filtering",
+  "limit": "This selected 416-question cohort must not be described as all 500 questions; no significance is claimed",
+  "legend_labels": [
+    "Unicast",
+    "Multicast"
+  ],
+  "source": "results/unicast_multicast/full_cohort",
+  "source_run_lock_sha256": "49558b3fe6518982982219455707c634b33c8edf84901099da8e6d17f9a8d2f5",
+  "source_receiver_results_sha256": "f49f11dc63c4bb5a6bba43198a3acf3bf6e4bc18a36b3cca425e63ab2f4f0bbd"
+}
